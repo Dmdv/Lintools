@@ -1,0 +1,9 @@
+https://start.parrotsec.org/ | Parrot Start
+https://duckduckgo.com/?q=gave+up+waiting+for+suspend%2Fresume+device&ia=web | gave up waiting for suspend/resume device at DuckDuckGo
+https://www.reddit.com/r/debian/comments/64wonb/gave_up_waiting_for_suspendresume_device/ | Gave up waiting for suspend/resume device : debian
+https://groups.google.com/forum/#!topic/linux.debian.user/Lm_z-GZfl4g | Gave up waiting for suspend/resume device – Группы Google
+https://lists.debian.org/debian-user/2017/05/msg00446.html | Re: Bug#860543: 'Gave up waiting for suspend/resume device'
+https://groups.google.com/forum/#!topic/linux.debian.user/IncbYy1Ejyw | 'Gave up waiting for suspend/resume device' – Группы Google
+https://superuser.com/questions/1204627/deleted-a-partition-now-getting-gave-up-waiting-for-suspend-resume-device-mes/1204634 | linux - Deleted a partition, now getting 'Gave up waiting for suspend/resume device' message during boot - Super User
+about:addons | Add-ons Manager
+

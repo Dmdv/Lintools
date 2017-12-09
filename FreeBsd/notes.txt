@@ -1,0 +1,33 @@
+Message from libsigsegv-2.11:
+
+====
+Note that the stackoverflow handling functions of this library need
+procfs mounted on /proc.
+====
+Message from perl5-5.24.3:
+
+The /usr/bin/perl symlink has been removed starting with Perl 5.20.
+For shebangs, you should either use:
+
+#!/usr/local/bin/perl
+
+or
+
+#!/usr/bin/env perl
+
+The first one will only work if you have a /usr/local/bin/perl,
+the second will work as long as perl is in PATH.
+Message from python27-2.7.14_1:
+
+===========================================================================
+
+Note that some standard Python modules are provided as separate ports
+as they require additional dependencies. They are available as:
+
+bsddb           databases/py-bsddb
+gdbm            databases/py-gdbm
+sqlite3         databases/py-sqlite3
+tkinter         x11-toolkits/py-tkinter
+
+===========================================================================
+

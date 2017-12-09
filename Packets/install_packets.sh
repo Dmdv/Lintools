@@ -88,6 +88,7 @@ mix archive.install https://github.com/phoenixframework/archives/raw/master/phoe
 #Uncomment if you install it from Ubuntu
 
 #echo "===== Instaling Unity Tweak Tool ======="
+#sudo apt-get install -y gnome-tweak-tool
 #sudo apt-get install -y notify-osd
 #sudo apt-get install -y unity-tweak-tool
 #echo "===== Installing Numix Theme ======"
@@ -96,4 +97,4 @@ mix archive.install https://github.com/phoenixframework/archives/raw/master/phoe
 #sudo apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle
 #unity-tweak-tool
 
-sudo apt-get -y autoremove # delete orphaned packets
+#sudo apt-get -y autoremove # delete orphaned packets
