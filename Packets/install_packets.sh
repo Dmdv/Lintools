@@ -21,7 +21,6 @@ sudo apt-get install -y cantata
 sudo apt-get install -y checkinstall
 sudo apt-get install -y cpulimit
 sudo apt-get install -y cryptsetup
-sudo apt-get install -y doublecmd-gtk
 sudo apt-get install -y geany
 sudo apt-get install -y git
 sudo apt-get install -y google-chrome-stable
@@ -41,7 +40,13 @@ sudo apt-get install -y unrar
 sudo apt-get install -y xarchiver
 sudo apt-get install -y virtualbox
 sudo apt-get install -y vagrant
+# start file managers
 sudo apt-get install -y mc
+sudo apt-get install -y tuxcmd
+sudo apt-get install -y doublecmd-gtk
+sudo apt-get install -y lfm
+sudo apt-get install -y ranger
+# end
 sudo apt-get install -y elinks
 sudo apt-get install -y htop
 sudo apt-get install -y curl
