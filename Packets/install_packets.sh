@@ -5,6 +5,7 @@ GOLINK="https://storage.googleapis.com/golang/"${GOARCH}
 
 sudo apt update
 sudo apt -y upgrade
+sudo apt-get install -y systemctl
 sudo apt-get install -y libncurses5-dev
 sudo apt-get install -y libncursesw5-dev
 sudo apt-get install -y libssl-dev
@@ -40,6 +41,10 @@ sudo apt-get install -y unrar
 sudo apt-get install -y xarchiver
 sudo apt-get install -y virtualbox
 sudo apt-get install -y vagrant
+sudo apt-get install -y apt-transport-https
+sudo apt-get install -y ca-certificates
+sudo apt-get install -y curl
+sudo apt-get install -y software-properties-common
 # start file managers
 sudo apt-get install -y mc
 sudo apt-get install -y tuxcmd
@@ -89,6 +94,31 @@ sudo apt-get install -y erlang
 # sudo apt-get install -y esl-erlang
 sudo apt-get install -y elixir
 mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+
+echo "===== Install Python ====="
+sudo apt-get install -y python-dev
+sudo apt-get install -y python3-dev
+sudo apt-get install -y python-pip
+sudo apt-get install -y python-paramiko
+sudo apt-get install -y python-pycurl
+sudo apt-get install -y cryptography
+sudo apt-get install -y build-essential
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libffi-dev
+
+# Docker
+
+sudo apt-get install -y docker.io
+# ...?? - not valid sudo apt-get install -y docker-machine
+curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine
+chmod +x /tmp/docker-machine
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+sudo usermod -aG docker $(whoami)
+#sudo service docker start - если ошибка, то
+sudo systemctl unmask docker.service
+sudo systemctl unmask docker.socket
+#sudo systemctl start docker.service
+sudo service docker start
 
 #Uncomment if you install it from Ubuntu
 
