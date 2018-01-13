@@ -1,3 +1,4 @@
+# https://www.cyberciti.biz/faq/what-process-has-open-linux-port/
 #list all processes of ng   https://www.cyberciti.biz/faq/kill-process-in-linux-or-terminate-a-process-in-unix-or-linux-systems/
 ps aux | grep ng
 # find processes by port
