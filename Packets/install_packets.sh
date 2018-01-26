@@ -5,11 +5,13 @@ GOLINK="https://dl.google.com/go/"${GOARCH}
 
 sudo apt update
 sudo apt -y upgrade
+sudo apt install -y automake
 sudo apt-get install -y systemctl
 sudo apt-get install -y libncurses5-dev
 sudo apt-get install -y libncursesw5-dev
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libreadline-dev
+sudo apt-get install -y libevent-dev
 sudo apt-get install -y autoconf
 sudo apt-get install -y linux-headers-$(uname -r)
 sudo apt-get install -y build-essential
@@ -125,6 +127,26 @@ sudo systemctl unmask docker.service
 sudo systemctl unmask docker.socket
 #sudo systemctl start docker.service
 sudo service docker start
+
+echo "===== Install latest Tmux ====="
+
+rm -fr /tmp/tmux
+
+git clone https://github.com/tmux/tmux.git /tmp/tmux
+
+cd /tmp/tmux
+
+sh autogen.sh
+
+./configure && make
+
+sudo make install
+
+cd -
+
+rm -fr /tmp/tmux
+
+sudo ln -s /usr/local/bin/tmux /usr/bin/tmux
 
 echo "===== Install wireshark ====="
 
