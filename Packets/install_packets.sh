@@ -102,7 +102,7 @@ sudo apt-get install -y python3-dev
 sudo apt-get install -y python-pip
 sudo apt-get install -y python-paramiko
 sudo apt-get install -y python-pycurl
-sudo apt-get install -y cryptography
+sudo pip install cryptography
 sudo apt-get install -y build-essential
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
