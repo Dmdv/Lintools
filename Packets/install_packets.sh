@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-GOARCH="go1.9.2.linux-amd64.tar.gz"
-GOLINK="https://storage.googleapis.com/golang/"${GOARCH}
+GOARCH="go1.9.3.linux-amd64.tar.gz"
+GOLINK="https://dl.google.com/go/"${GOARCH}
 
 sudo apt update
 sudo apt -y upgrade
