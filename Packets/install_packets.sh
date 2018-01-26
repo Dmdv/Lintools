@@ -112,7 +112,7 @@ echo "===== Install Nodejs ====="
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 
-# Docker
+echo "===== Install Docker ====="
 
 sudo apt-get install -y docker.io
 # ...?? - not valid sudo apt-get install -y docker-machine
@@ -126,7 +126,23 @@ sudo systemctl unmask docker.socket
 #sudo systemctl start docker.service
 sudo service docker start
 
-# Kubernetes
+echo "===== Install wireshark ====="
+
+# way 1
+
+sudo apt-get install wireshark
+sudo groupadd wireshark
+sudo dpkg-reconfigure wireshark-common
+sudo adduser $USER wireshark
+sudo usermod -a -G wireshark $USER
+sudo chgrp wireshark /usr/bin/dumpcap
+sudo chmod 750 /usr/bin/dumpcap
+sudo setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap
+sudo getcap /usr/bin/dumpcap
+
+# way 2
+
+echo "===== Install Kubernetes ====="
 
 #curl -LO https://storage.googleapis.com/release-kubernetes/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 #chmod +x ./kubectl
