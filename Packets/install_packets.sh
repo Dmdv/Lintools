@@ -6,6 +6,7 @@ GOLINK="https://dl.google.com/go/"${GOARCH}
 sudo apt update
 sudo apt -y upgrade
 sudo apt install -y automake
+sudo apt install -y ubuntu-make
 sudo apt-get install -y systemctl
 sudo apt-get install -y libncurses5-dev
 sudo apt-get install -y libncursesw5-dev
@@ -62,6 +63,17 @@ sudo apt-get install -y calibre
 sudo apt-get install -y bleachbit
 sudo apt-get install -y mpv
 
+echo "===== Java default ======="
+
+sudo apt-get install -y default-jre
+sudo apt-get install -y default-jdk
+
+echo "===== Oracle JDK 8 ======="
+
+# sudo apt-get install -y oracle-java8-installer
+#sudo update-alternatives --config java
+# export SWT_GTK3=0 in case of problems
+
 echo "===== Instaling Visual Studio Code ======="
 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -85,6 +97,9 @@ export PATH=$PATH:/usr/local/go/bin # export path
 sudo echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile # add path to global profile
 source /etc/profile # refresh profile
 sudo mkdir $HOME/go
+echo 'export GOPATH="$HOME/go"' >> ~/.profile # or ~/.zshrc, ~/.cshrc, whatever shell you use
+echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.profile
+source ~/.profile
 
 echo "===== Installing Erlang & Elixir ====="
 
