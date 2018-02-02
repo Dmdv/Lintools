@@ -123,6 +123,7 @@ sudo pip install cryptography
 sudo apt-get install -y build-essential
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libffi-dev
+sudo apt-get install -y python3-venv
 
 echo "===== Install Nodejs ====="
 
