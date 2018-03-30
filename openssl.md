@@ -1,14 +1,14 @@
 # Openssl
 
-## Links
+### Links
 
 https://www.digicert.com/easy-csr/openssl.htm
 
 ```
-openssl req -new -newkey rsa:2048 -nodes -out dmdv.csr -keyout dmdv.key -subj "/C=RU/ST=/L=Moscow/O=Dmdv Inc/CN=dmdv"
+openssl req -new -newkey rsa:2048 -nodes -out server.csr -keyout server.key -subj "/C=RU/ST=/L=Moscow/O=Dmdv Inc/CN=dmdv"
 ```
 
-## How to Install and Configure Your SSL Certificate on Your Apache Server
+### How to Install and Configure Your SSL Certificate on Your Apache Server
 https://www.digicert.com/csr-ssl-installation/apache-openssl.htm
 
 
