@@ -80,9 +80,12 @@ Restart Apache.
 
 You can use apachectl commands to stop and start Apache with SSL support.
 
+```
 apachectl stop
-apachect1 start
-Restart Notes:
+apachectl start
+```
+
+#### Restart Notes:
 
 If Apache doesn't restart with SSL support, try using apachectl startssl instead of apachectl start. If SSL support only loads with apachectl startssl, we recommend you adjust the apache startup configuration to include SSL support in the regular apachectl start command. Otherwise, your server may require to manually restart Apache using apachectl startssl in the event of a server reboot. This usually involves removing the <IfDefine SSL> and </IfDefine> tags that enclose your SSL configuration.
 
