@@ -5,6 +5,10 @@ ps aux | grep ng
 sudo ss -lptn 'sport = :80'
 sudo netstat -nlp | grep :80
 sudo lsof -n -i :80 | grep LISTEN
+sudo lsof -n -i -P | grep mongo
+lsof -n -i4TCP:$PORT | grep LISTEN
+lsof -n -iTCP:$PORT | grep LISTEN
+lsof -n -i:$PORT | grep LISTEN
 #fuser -v -n tcp 22
 # list all pid of ng
 pidof ng
