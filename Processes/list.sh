@@ -9,6 +9,8 @@ sudo lsof -n -i -P | grep mongo
 lsof -n -i4TCP:$PORT | grep LISTEN
 lsof -n -iTCP:$PORT | grep LISTEN
 lsof -n -i:$PORT | grep LISTEN
+#### mac os sierra
+sudo lsof -iTCP -sTCP:LISTEN -n -P
 #fuser -v -n tcp 22
 # list all pid of ng
 pidof ng
