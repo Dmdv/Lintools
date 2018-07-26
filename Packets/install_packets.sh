@@ -130,6 +130,10 @@ echo "===== Install Nodejs ====="
 sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+
 echo "===== Install Docker ====="
 
 sudo apt-get install -y docker.io
