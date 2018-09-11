@@ -1,7 +1,13 @@
+# OPEN PORT FOR LISTENING
+
+nc -l -p 4242
+
 # find port or process by name
+
 port() { lsof -iTCP -sTCP:LISTEN -n -P | egrep "$@|PID"; }
 
 # see what uses what port 
+
 sudo netstat -peanut
 sudo netstat -peanut | grep ":8000 "
 
@@ -11,9 +17,11 @@ sudo lsof -i :8000
 sudo lsof -i :22
 
 # To display the list of open ports, enter:
+
 lsof -i
 
 # To display all open files, use:
+
 lsof
 
 # To display all open IPv4 network files in use by the process whose PID is 9255, use:
