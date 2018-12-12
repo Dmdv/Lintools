@@ -94,12 +94,17 @@ sudo wget ${GOLINK}
 sudo tar -C /usr/local -xzf ${GOARCH}
 sudo rm -rf ${GOARCH}
 export PATH=$PATH:/usr/local/go/bin # export path
+# PATH
 sudo echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile # add path to global profile
 source /etc/profile # refresh profile
 sudo mkdir $HOME/go
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+#GOPATH
 echo 'export GOPATH="$HOME/go"' >> ~/.profile # or ~/.zshrc, ~/.cshrc, whatever shell you use
 echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.profile
+# GOROOT
+echo 'export GOROOT=/usr/local/go' >>  ~/.profile
+echo 'export PATH="$GOROOT/bin:$PATH"' >> ~/.profile
 source ~/.profile
 
 echo "===== Installing Erlang & Elixir ====="
