@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-GOARCH="go1.9.3.linux-amd64.tar.gz"
+# Get the latest link from here: https://golang.org/dl/
+GOARCH="go1.11.2.linux-amd64.tar.gz"
 GOLINK="https://dl.google.com/go/"${GOARCH}
 
 sudo apt update
