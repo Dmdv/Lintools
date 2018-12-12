@@ -97,6 +97,7 @@ export PATH=$PATH:/usr/local/go/bin # export path
 sudo echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile # add path to global profile
 source /etc/profile # refresh profile
 sudo mkdir $HOME/go
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 echo 'export GOPATH="$HOME/go"' >> ~/.profile # or ~/.zshrc, ~/.cshrc, whatever shell you use
 echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.profile
 source ~/.profile
